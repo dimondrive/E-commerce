@@ -3,8 +3,6 @@ import reactLogo from "./assets/react.svg";
 import "@/assets/scss/styles.js";
 import Card from "./components/cardItem/Card";
 
-function App() {
-  return <Card />;
+export default function App() {
+  return <></>;
 }
-
-export default App;

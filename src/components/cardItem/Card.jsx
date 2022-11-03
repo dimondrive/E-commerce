@@ -8,8 +8,7 @@ function Card() {
   //template
   return (
     <>
-      <h1 className="color">ghk</h1>
-      <button onClick={noob}>hgk</button>
+      <h1 className="color">Card</h1>
     </>
   );
 }
