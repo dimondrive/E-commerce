@@ -39,7 +39,7 @@ export default function Card({
           <div className="flex items-end pb-4">
             <div
               className="product-price
-          flex flex-col  w-[100%] pt-2"
+              flex flex-col  w-[100%] pt-2"
             >
               <p
                 className="price font-sans font-semibold text-sm
@@ -49,7 +49,7 @@ export default function Card({
                 {price}.00 BYN
               </p>
               <p
-                className="price-old font-sans font-light  text-[10px]
+                className="price-old font-sans font-light  text-sm
             
             "
               >
@@ -70,7 +70,7 @@ export default function Card({
                "
                 >
                   <p
-                    className="cart-descr text-[10px] font-sans
+                    className="cart-descr text-[10px] font-sans font-semibold
 
                     "
                   >
