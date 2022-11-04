@@ -10,7 +10,7 @@ import iphoneImg from "@/assets/images/iphone-product.svg";
 const props = {
   //simulation props
   discount: [20],
-  images: iphoneImg,
+  images: [iphoneImg],
 };
 
 export default function Card() {
@@ -22,14 +22,27 @@ export default function Card() {
     );
   }
 
+  function ProductImage(props) {
+    return <img className="product-image" src={props.value} alt="" />;
+  }
+
+  const image = props.images;
   const discount = props.discount;
-  const discountItem = discount.map((number) => (
-    <DiscountLabel key={number.toString()} value={number} />
-  ));
 
   return (
     <>
-      <li className="product-container">{discountItem}</li>
+      <li className="product-container">
+        {discount.map((number) => (
+          <DiscountLabel key={number.toString()} value={number} />
+        ))}
+        <div className="product">
+          {image.map((item) => (
+            <ProductImage key={item.toString()} value={item} />
+          ))}
+          <p></p>
+          <button></button>
+        </div>
+      </li>
     </>
   );
 }
