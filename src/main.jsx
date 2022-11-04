@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import Root from "./routes/root";
 import ErrorPage from "./routes/error-page";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import Card from "./components/cardItem/Card";
+
+import RenderCard from "./components/cardItem/RenderListCard";
 
 import App from "./App";
 import "./index.css";
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/card",
-        element: <Card />,
+        element: <RenderCard />,
       },
     ],
   },
