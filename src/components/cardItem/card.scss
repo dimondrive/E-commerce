@@ -9,7 +9,7 @@
         position: relative;
         padding: 8px 13px;
         max-width: 250px;
-        max-height: 360px;
+        max-height: 365px;
         border: 1px solid rgba(174, 174, 174, 0.28);
         border-radius: 20px;
         box-sizing: border-box;
@@ -17,7 +17,8 @@
                 
                 display: flex;
                 align-items: center;
-                
+                max-width: 32px;
+                max-height: 30px;
                 width: 32px;
                 height: 30px;
                 border-radius: 50%;

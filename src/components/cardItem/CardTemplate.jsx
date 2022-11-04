@@ -22,7 +22,7 @@ export default function Card({
       <ul>
         <li className="product-container">
           <div className="discount-label">
-            <span>-{discount}%</span>
+            <span>{discount}%</span>
           </div>
           <div className="product">
             <img className="product-image" src={images} alt="" />
