@@ -39,15 +39,38 @@
   }
   
 .product {
-    display: flex;
+    display: block;
     flex-direction: column;
-
+    text-align: center;
+    cursor: pointer;
     &-image{
         max-width: 160px;
         max-height: 176px;
     }
+    &-descr{
+        font-size: 12px;
+        
+    }
 }
   
+.cart {
+    width: 80px;
+    height: 20px;
+    &-btn {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    &-descr {
+        font-size: 10px;
+        margin: 0;
+    }
+
+}
+
+
+
 
 
   

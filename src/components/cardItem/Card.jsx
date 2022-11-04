@@ -11,23 +11,25 @@ const props = {
   //simulation props
   discount: [20],
   images: [iphoneImg],
+  descr: ["Смартфон Samsung Galaxy S21 5G 8GB/128GB"],
 };
 
+function DiscountLabel(props) {
+  return (
+    <div className="discount-label">
+      <span>-{props.value}%</span>
+    </div>
+  );
+}
+
+function ProductImage(props) {
+  return <img className="product-image" src={props.value} alt="" />;
+}
+
 export default function Card() {
-  function DiscountLabel(props) {
-    return (
-      <div className="discount-label">
-        <span>-{props.value}%</span>
-      </div>
-    );
-  }
-
-  function ProductImage(props) {
-    return <img className="product-image" src={props.value} alt="" />;
-  }
-
   const image = props.images;
   const discount = props.discount;
+  const descr = props.descr;
 
   return (
     <>
@@ -35,12 +37,29 @@ export default function Card() {
         {discount.map((number) => (
           <DiscountLabel key={number.toString()} value={number} />
         ))}
+
         <div className="product">
           {image.map((item) => (
             <ProductImage key={item.toString()} value={item} />
           ))}
-          <p></p>
-          <button></button>
+        </div>
+
+        {descr.map((item) => (
+          <p className="product-descr">{item}</p>
+        ))}
+
+        <div>
+          <div className="product-price">
+            <p className="price"></p>
+            <p className="price-old"></p>
+          </div>
+
+          <div className="cart">
+            <button className="cart-btn">
+              <p className="cart-descr">В корзину</p>
+            </button>
+            <img className="cart-img" src="" alt="" />
+          </div>
         </div>
       </li>
     </>
