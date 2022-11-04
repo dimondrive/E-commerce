@@ -8,7 +8,9 @@ export default function Root() {
           Home
         </Link>
         <Link to={`/card`}>Card</Link>
-        <Outlet />
+        <div className="flex flex-row gap-5">
+          <Outlet />
+        </div>
       </div>
     </>
   );
