@@ -1,4 +1,5 @@
 import React, { useState, useRef, createRef } from "react";
+import axios from "axios";
 
 import IconBasket from "@/assets/icons/Icon-basket.svg";
 import "@/components/cardItem/card.scss";

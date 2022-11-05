@@ -11,15 +11,16 @@ import "./index.css";
 
 const router = createBrowserRouter([
   {
+    path: "/card",
+    element: <RenderCard />,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: "/",
     element: <Root />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/card",
-        element: <RenderCard />,
-      },
-    ],
+  },
+  {
+    path: "/api/products",
   },
 ]);
 
