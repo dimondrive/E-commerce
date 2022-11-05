@@ -66,7 +66,7 @@ export default function Card({
                 <button
                   className="cart-btn flex items-center  justify-between p-2
                 border rounded-full border-rose-600/50 hover:border-rose-600 bg-white 
-                duration-100 hover:outline outline-offset outline-2  focus:outline-pink-500/50 hover:outline-pink-500/50 active:bg-red-700/50 active:text-white focus:outline-none focus:ring-pink-500/50
+                duration-100 hover:outline outline-offset outline-2  focus:outline-pink-500/50 hover:outline-pink-500/50 active:bg-red-700/50 active:text-white focus:outline-none 
                "
                 >
                   <p

@@ -28,19 +28,15 @@ export default function RenderCard() {
       priceOld: "2499",
     },
   ];
-  return (
-    <>
-      {data.map((item, index) => (
-        <Card
-          discount={item.discount}
-          price={item.price}
-          description={item.description}
-          key={index}
-          images={item.images}
-          icon={item.icon}
-          oldPrice={item.priceOld}
-        />
-      ))}
-    </>
-  );
+  return data.map((item, key) => (
+    <Card
+      discount={item.discount}
+      price={item.price}
+      description={item.description}
+      key={key}
+      images={item.images}
+      icon={item.icon}
+      oldPrice={item.priceOld}
+    />
+  ));
 }
