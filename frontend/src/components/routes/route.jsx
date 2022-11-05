@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Root from "@/components/routes/root";
+import PageMain from "@/components/pages/pageMain";
 import ErrorPage from "@/components/routes/error-page";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
-import RenderCard from "./components/cardItem/RenderListCard";
+import RenderCard from "@/components/cardItem/RenderListCard";
 
-import App from "./App";
-import "./index.css";
+import App from "../../App";
+import "@/index.css";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Root />,
+    element: <PageMain />,
   },
   {
     path: "/api/products",
