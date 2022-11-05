@@ -14,7 +14,7 @@ export default function RenderCard() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios.get("/api/products");
+      const result = await axios.get("http://localhost:5000/api/products");
       setProducts(result.data);
     };
     fetchData();
