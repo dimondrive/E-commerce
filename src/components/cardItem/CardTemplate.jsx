@@ -1,6 +1,6 @@
 import React, { useState, useRef, createRef } from "react";
 
-import iphoneImg from "@/assets/images/iphone-product.svg";
+import IconBasket from "@/assets/icons/Icon-basket.svg";
 import "@/components/cardItem/card.scss";
 import "@/components/cardItem/cardMedia.scss";
 
@@ -10,9 +10,8 @@ import RenderCard from "@/components/cardItem/RenderListCard";
 
 export default function Card({
   discount,
-  index,
+  slug,
   images,
-  icon,
   price,
   oldPrice,
   description,
@@ -80,7 +79,7 @@ export default function Card({
                     className="cart-img w-[12px]
                     
                     "
-                    src={icon}
+                    src={IconBasket}
                     alt=""
                   />
                 </button>
