@@ -33,7 +33,11 @@ export default function Navbar({}) {
                 Главная
               </a>
               <a href="/products" className="text-[15px] font-sans font-normal">
-                Товары
+                Акции
+              </a>
+
+              <a href="/products" className="text-[15px] font-sans font-normal">
+                Каталог
               </a>
             </div>
           </div>
