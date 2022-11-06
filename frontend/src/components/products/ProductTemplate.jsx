@@ -12,10 +12,11 @@ import ProductRender from "@/components/products/ProductRender";
 export default function Product({
   discount,
   slug,
+  id,
   images,
   price,
   oldPrice,
-  description,
+  name,
 }) {
   return (
     <>
@@ -32,7 +33,7 @@ export default function Product({
              
              "
             >
-              {description}
+              {name}
             </p>
           </div>
 

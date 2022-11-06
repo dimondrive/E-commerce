@@ -3,7 +3,7 @@ const data = {
        {
             discount: "30",
             category: 'Смарфтоны',
-            description: "Смартфон Samsung Galaxy S21 5G 8GB/128GB",
+            name: "Смартфон Samsung Galaxy S21 5G 8GB/128GB",
             image: './images/iphone-product.svg',
             price: "2099",
             priceOld: "2499",
@@ -12,7 +12,7 @@ const data = {
        {
             discount: "30",
             category: 'Планшеты',
-            description: "Планшет Samsung Galaxy S30 5G 8GB/128GB",
+            name: "Планшет Samsung Galaxy S30 5G 8GB/128GB",
             image: './images/iphone-product.svg',
             price: "1800",
             priceOld: "2499",

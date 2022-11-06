@@ -2,9 +2,9 @@ import React, { useState, useRef, createRef, useEffect } from "react";
 // import data from "../services/data";
 import axios from "axios";
 //template
-import ProductTemplate from "@/components/products/ProductTemplate";
+import NavbarTemplate from "@/components/Layout/navigation/NavbarTemplate";
 
-export default function ProductRender() {
+export default function NavbarRender() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +18,7 @@ export default function ProductRender() {
     <>
       <div className="container mx-auto px-4  w-full h-full flex flex-row mt-[100px] gap-10">
         {products.map((product, key) => (
-          <ProductTemplate
+          <NavbarTemplate
             discount={product.discount}
             price={product.price}
             name={product.name}
