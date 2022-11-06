@@ -5,8 +5,11 @@ import axios from "axios";
 import Search from "../../search/search";
 // image
 import IconLogo from "@/assets/icons/icon-logo.svg";
+// import { Route } from "react-router-dom";
+// import ProductRender from "../../products/ProductRender";
+// import PageMain from "../../pages/pageMaim";
 
-export default function Navbar({}) {
+export default function Navbar({ searchValue, setSearchValue }) {
   return (
     <>
       <nav className="w-full h-[90px] bg-gray-200/50">
@@ -25,18 +28,33 @@ export default function Navbar({}) {
             </div>
 
             <div>
-              <Search />
+              <Search
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
+              />
             </div>
 
             <div className="flex gap-[56px]">
-              <a href="/" className="text-[15px] font-sans font-normal">
+              <a
+                href="/"
+                // element={<PageMain />}
+                className="text-[15px] font-sans font-normal"
+              >
                 Главная
               </a>
-              <a href="/products" className="text-[15px] font-sans font-normal">
+              <a
+                href="/products"
+                // element={<ProductRender />}
+                className="text-[15px] font-sans font-normal"
+              >
                 Акции
               </a>
 
-              <a href="/products" className="text-[15px] font-sans font-normal">
+              <a
+                href="/products"
+                // element={<ProductRender />}
+                className="text-[15px] font-sans font-normal"
+              >
                 Каталог
               </a>
             </div>
