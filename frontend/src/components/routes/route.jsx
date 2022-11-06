@@ -4,15 +4,15 @@ import PageMain from "@/components/pages/pageMain";
 import ErrorPage from "@/components/routes/error-page";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
-import RenderCard from "@/components/cardItem/RenderListCard";
+import ProductRender from "@/components/products/ProductRender";
 
 import App from "../../App";
 import "@/index.css";
 
 const router = createBrowserRouter([
   {
-    path: "/card",
-    element: <RenderCard />,
+    path: "/products",
+    element: <ProductRender />,
     errorElement: <ErrorPage />,
   },
   {

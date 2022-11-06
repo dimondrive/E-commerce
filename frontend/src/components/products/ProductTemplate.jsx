@@ -1,15 +1,15 @@
 import React, { useState, useRef, createRef } from "react";
 import axios from "axios";
 
-import IconBasket from "@/assets/icons/Icon-basket.svg";
-import "@/components/cardItem/card.scss";
-import "@/components/cardItem/cardMedia.scss";
+import IconBasket from "@/assets/icons/icon-basket.svg";
+import "@/components/products/card.scss";
+import "@/components/products/cardMedia.scss";
 
 //images
-import RenderCard from "@/components/cardItem/RenderListCard";
+import ProductRender from "@/components/products/ProductRender";
 //
 
-export default function Card({
+export default function Product({
   discount,
   slug,
   images,

@@ -1,22 +1,15 @@
 import { Outlet, Link } from "react-router-dom";
-import Countdown from "react-countdown";
+import Timer from "@/components/Layout/Timer/Timer";
+import ProductRender from "@/components/products/ProductRender";
 
 export default function Root() {
-  const Achiements = () => <h1>Вы дождались 10 секунд</h1>;
   return (
     <>
-      <div id="detail">
-        <Link className="home-link" to={`/`}>
-          Home
-        </Link>
-        <Link to={`/card`}>Card</Link>
-        <div className="flex flex-row gap-5">
-          <Outlet />
+      <div className="container mx-auto px-4 pt-[100px]">
+        До конца Акции <Timer />
+        <div>
+          <ProductRender />
         </div>
-
-        <Countdown date="2022-12-29T00:00:00">
-          <Achiements />
-        </Countdown>
       </div>
     </>
   );
