@@ -18,6 +18,8 @@ export default function Product({
   oldPrice,
   name,
 }) {
+  const [allProducts, setAllProducts] = useState([]);
+
   return (
     <>
       <ul>

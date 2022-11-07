@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
 import ProductRender from "@/components/products/ProductRender";
 
-import App from "../../App";
+import App from "@/components/App";
 import "@/index.css";
 
 const router = createBrowserRouter([
@@ -19,14 +19,15 @@ const router = createBrowserRouter([
     path: "/",
     element: <PageMain />,
   },
-  {
-    path: "/api/products",
-  },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-    <RouterProvider router={router} />
-  </React.StrictMode>
-);
+function Main() {
+  return (
+    <React.StrictMode>
+      <App />
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<Main />);

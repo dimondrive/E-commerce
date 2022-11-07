@@ -5,11 +5,11 @@ const app = express()
 
 
 
-app.use(cors({
-    origin: '*'
-}))
+// app.use(cors())
 
-app.get('/api/products', (req, res) => {
+app.get('/api/products', cors({
+    origin: '*'
+}), (req, res) => {
     res.send(data.products)
 });
 
