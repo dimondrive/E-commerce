@@ -11,8 +11,6 @@ import logger from "use-reducer-logger";
 
 import ProductTemplate from "@/components/products/ProductTemplate";
 
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
-
 const reducer = (state, action) => {
   switch (action.type) {
     case "FETCH_REQUEST":
@@ -62,8 +60,10 @@ function ProductRender() {
               discount={product.discount}
               price={product.price}
               name={product.name}
+              myKey={key}
+              key={product.slug}
+              id={product.id}
               slug={product.slug}
-              index={product.slug}
               images={product.image}
               oldPrice={product.priceOld}
             />

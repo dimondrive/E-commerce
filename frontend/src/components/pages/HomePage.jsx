@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, BrowserRouter, Routes } from "react-router-dom";
 import Timer from "@/components/Layout/Timer/Timer";
 import ProductView from "@/components/products/ProductView";
 
