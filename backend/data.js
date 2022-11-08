@@ -1,15 +1,16 @@
 const data = {
     products:  [
-       {    
-            id: 1,
-            discount: "20",
-            category: 'Смарфтоны',
-            name: "Смартфон Samsung Galaxy S21 5G 8GB/128GB",
-            image: './images/iphone-product.svg',
-            price: "2099",
-            priceOld: "2499",
-            slug:'samsung-galaxy-s21-5g-8gb/128gb'
-       },{    
+    {    
+        id: 1,
+        discount: "20",
+        category: 'Смарфтоны',
+        name: "Смартфон Samsung Galaxy S21 5G 8GB/128GB",
+        image: './images/iphone-product.svg',
+        price: "2099",
+        priceOld: "2499",
+        slug:'samsung-galaxy-s21-5g-8gb-128gb'
+    },
+    {    
         id: 2,
         discount: "30",
         category: 'Планшеты',
@@ -17,7 +18,7 @@ const data = {
         image: './images/iphone-product.svg',
         price: "1800",
         priceOld: "2499",
-        slug:'samsung-galaxy-s30-5g-8gb/128gb'
+        slug:'samsung-galaxy-s30-5g-8gb-128gb'
     },
     {   
         id: 3,
@@ -27,7 +28,7 @@ const data = {
         image: './images/iphone-product.svg',
         price: "2099",
         priceOld: "2499",
-        slug:'samsung-galaxy-s21-5g-4gb/64gb'
+        slug:'samsung-galaxy-s21-5g-4gb-64gb'
    },
    {    
         id: 4,
@@ -37,7 +38,7 @@ const data = {
         image: './images/iphone-product.svg',
         price: "1800",
         priceOld: "2499",
-        slug:'samsung-galaxy-s30-5g-4gb/64gb'
+        slug:'samsung-galaxy-s30-5g-4gb-64gb'
     },
        
     ]

@@ -60,9 +60,7 @@ function ProductRender() {
               discount={product.discount}
               price={product.price}
               name={product.name}
-              myKey={key}
-              key={product.slug}
-              id={product.id}
+              meyKey={key}
               slug={product.slug}
               images={product.image}
               oldPrice={product.priceOld}

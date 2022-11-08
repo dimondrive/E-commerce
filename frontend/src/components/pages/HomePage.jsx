@@ -8,9 +8,6 @@ export default function Root() {
     <>
       <div className="container mx-auto px-4 pt-[100px]">
         До конца Акции <Timer />
-        <div>
-          <ProductView />
-        </div>
       </div>
     </>
   );

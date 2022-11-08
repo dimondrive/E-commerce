@@ -17,8 +17,6 @@ export default function Product({
   oldPrice,
   name,
   slug,
-  id,
-  key,
   myKey,
 }) {
   const [allProducts, setAllProducts] = useState([]);
@@ -29,9 +27,13 @@ export default function Product({
         <div className="discount-label">
           <span>{discount}%</span>
         </div>
-        <div className="product">
+        <div className="product ">
           <Link to={`/product/${slug}`}>
-            <img className="product-image" src={images} alt={name} />
+            <img
+              className="product-image block m-auto pb-[20px]   align-cetner"
+              src={images}
+              alt={name}
+            />
 
             <p
               className="cart-descr
