@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import PageMain from "@/components/pages/pageMain";
+import HomePage from "@/components/pages/HomePage";
 import ErrorPage from "@/components/routes/error-page";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
-import ProductRender from "@/components/products/ProductRender";
+import ProductView from "@/components/products/ProductView";
 
 import App from "@/components/App";
 import "@/index.css";
@@ -12,12 +12,12 @@ import "@/index.css";
 const router = createBrowserRouter([
   {
     path: "/products",
-    element: <ProductRender />,
+    element: <ProductView />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/",
-    element: <PageMain />,
+    element: <HomePage />,
   },
 ]);
 

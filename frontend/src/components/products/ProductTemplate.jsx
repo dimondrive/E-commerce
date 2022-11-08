@@ -1,12 +1,13 @@
 import React, { useState, useRef, createRef } from "react";
 import axios from "axios";
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 
 import IconBasket from "@/assets/icons/icon-basket.svg";
 import "@/components/products/card.scss";
 import "@/components/products/cardMedia.scss";
 
 //images
-import ProductRender from "@/components/products/ProductRender";
+import ProductView from "@/components/products/ProductView";
 //
 
 export default function Product({
@@ -22,21 +23,25 @@ export default function Product({
 
   return (
     <>
-      <ul>
+      <ul key={slug}>
         <li className="product-container">
           <div className="discount-label">
             <span>{discount}%</span>
           </div>
           <div className="product">
-            <img className="product-image" src={images} alt="" />
-            <p
-              className="cart-descr
-             font-sans text-sm text-left font-medium
-             
-             "
-            >
-              {name}
-            </p>
+            <Link to={`/product/${slug}`}>
+              <img className="product-image" src={images} alt={name} />
+            </Link>
+            <Link to={`/product/${slug}`}>
+              <p
+                className="cart-descr
+              font-sans text-sm text-left font-medium
+              
+              "
+              >
+                {name}
+              </p>
+            </Link>
           </div>
 
           <div className="flex items-end pb-4">

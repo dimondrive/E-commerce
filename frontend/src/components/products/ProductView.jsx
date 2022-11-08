@@ -11,6 +11,8 @@ import logger from "use-reducer-logger";
 
 import ProductTemplate from "@/components/products/ProductTemplate";
 
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "FETCH_REQUEST":
@@ -50,17 +52,23 @@ function ProductRender() {
   return (
     <>
       <div className="container mx-auto px-4  w-full h-full flex flex-row mt-[100px] gap-10">
-        {products.map((product, key) => (
-          <ProductTemplate
-            discount={product.discount}
-            price={product.price}
-            name={product.name}
-            key={product.id}
-            index={product.slug}
-            images={product.image}
-            oldPrice={product.priceOld}
-          />
-        ))}
+        {loading ? (
+          <div> Loading... </div>
+        ) : error ? (
+          <div> {error} </div>
+        ) : (
+          products.map((product, key) => (
+            <ProductTemplate
+              discount={product.discount}
+              price={product.price}
+              name={product.name}
+              slug={product.slug}
+              index={product.slug}
+              images={product.image}
+              oldPrice={product.priceOld}
+            />
+          ))
+        )}
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { Outlet, Link } from "react-router-dom";
 import Timer from "@/components/Layout/Timer/Timer";
-import ProductRender from "@/components/products/ProductRender";
+import ProductView from "@/components/products/ProductView";
 
 export default function Root() {
   return (
@@ -10,7 +10,7 @@ export default function Root() {
       <div className="container mx-auto px-4 pt-[100px]">
         До конца Акции <Timer />
         <div>
-          <ProductRender />
+          <ProductView />
         </div>
       </div>
     </>
