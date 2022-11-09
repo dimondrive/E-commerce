@@ -51,13 +51,14 @@ function ProductRender() {
     <>
       <div className="container mx-auto px-4  w-full h-full flex flex-row mt-[100px] gap-10">
         {loading ? (
-          <div> Loading... </div>
+          <div> Загрузка... </div>
         ) : error ? (
           <div> {error} </div>
         ) : (
           products.map((product, key) => (
             <ProductTemplate
-              key={product.slug}
+              key={key}
+              slug={product.slug}
               discount={product.discount}
               price={product.price}
               name={product.name}
