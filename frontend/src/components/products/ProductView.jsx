@@ -57,11 +57,10 @@ function ProductRender() {
         ) : (
           products.map((product, key) => (
             <ProductTemplate
+              key={product.slug}
               discount={product.discount}
               price={product.price}
               name={product.name}
-              meyKey={key}
-              slug={product.slug}
               images={product.image}
               oldPrice={product.priceOld}
             />

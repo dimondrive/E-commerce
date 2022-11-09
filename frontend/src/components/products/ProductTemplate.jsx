@@ -23,7 +23,7 @@ export default function Product({
 
   return (
     <ul>
-      <li key={myKey} className="product-container">
+      <li className="product-container">
         <div className="discount-label">
           <span>{discount}%</span>
         </div>
@@ -84,7 +84,7 @@ export default function Product({
 
                     "
                 >
-                  В корзину
+                  Подробнее
                 </p>
                 <img
                   className="cart-img w-[12px]

@@ -7,7 +7,7 @@ export default function Root() {
   return (
     <>
       <div className="container mx-auto px-4 pt-[100px]">
-        До конца Акции <Timer /> fix ebanogo push-a
+        До конца Акции <Timer />
       </div>
     </>
   );
