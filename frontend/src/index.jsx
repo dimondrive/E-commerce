@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RecoilRoot } from "recoil";
+import RecoilNexus from "recoil-nexus";
 
 import HomePage from "@/components/pages/HomePage";
 import ProductPage from "@/components/pages/ProductPage";
@@ -41,6 +42,7 @@ function Main() {
   return (
     <React.StrictMode>
       <RecoilRoot>
+        <RecoilNexus />
         <App />
         <RouterProvider router={router} />
       </RecoilRoot>

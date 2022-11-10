@@ -13,7 +13,7 @@ function ProductRender() {
       .get("http://localhost:5000/api/products")
       .then((result) => result.data)
       .then((result) => {
-        setProducts((products) => result);
+        setProducts(result);
       });
   };
 
