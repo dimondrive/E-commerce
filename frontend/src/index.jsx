@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { RecoilRoot } from "recoil";
+
 import HomePage from "@/components/pages/HomePage";
 import ProductPage from "@/components/pages/ProductPage";
 import ErrorPage from "@/components/routes/error-page";
@@ -38,8 +40,10 @@ const router = createBrowserRouter([
 function Main() {
   return (
     <React.StrictMode>
-      <App />
-      <RouterProvider router={router} />
+      <RecoilRoot>
+        <App />
+        <RouterProvider router={router} />
+      </RecoilRoot>
     </React.StrictMode>
   );
 }
