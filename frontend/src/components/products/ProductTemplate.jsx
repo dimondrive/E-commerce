@@ -30,7 +30,7 @@ export default function Product({
         <div className="product ">
           <Link to={`/product/${slug}`}>
             <img
-              className="product-image block m-auto pb-[20px]   align-cetner"
+              className="product-image block m-auto pb-[20px]   align-center"
               src={images}
               alt={name}
             />

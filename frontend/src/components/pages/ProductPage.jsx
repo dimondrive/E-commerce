@@ -47,16 +47,11 @@ function ProductPage() {
       ) : error ? (
         <div>{error}</div>
       ) : (
-        <>
-          <div>
-            <img
-              className="product-image block m-auto pb-[20px]  align-cetner"
-              src={product.image}
-              alt={product.name}
-            />
-          </div>
-          <div>{product.images}</div>
-        </>
+        <img
+          className="product-image block m-auto pb-[20px]   align-center"
+          src={product.images}
+          alt={product.name}
+        />
       )}
     </>
   );
