@@ -1,26 +1,27 @@
 import React, { useState, useRef, createRef, useEffect } from "react";
 // import data from "../services/data";
-import { useRecoilValue, selector } from "recoil";
+import { useRecoilValue, selector, useRecoilState } from "recoil";
 import axios from "axios";
 
 import ProductTemplate from "@/components/products/ProductTemplate";
-
-const productsQuery = selector({
-  key: "Products", //Должен быть уникальный
-  get: async () => {
-    try {
-      const result = await axios.get("http://localhost:5000/api/products");
-      return result.data || [];
-    } catch (error) {
-      console.log(`Error: ${error}`);
-      return [];
-    }
-  },
-});
+import { productsState } from "../../store/atoms";
 
 function ProductRender() {
-  // Получение продукт листа из Recoil стейта
-  const products = useRecoilValue(productsQuery);
+  const [products, setProducts] = useRecoilState(productsState);
+  const requireProducts = () => {
+    axios
+      .get("http://localhost:5000/api/products")
+      .then((result) => result.data)
+      .then((result) => {
+        setProducts((products) => result);
+      });
+  };
+
+  useEffect(() => {
+    requireProducts();
+  }, []);
+  console.log("Products", products);
+
   return (
     <>
       <div className="flex gap-10 mt-[100px] justify-center">
