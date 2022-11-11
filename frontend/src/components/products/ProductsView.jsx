@@ -4,7 +4,7 @@ import { useRecoilValue, useRecoilState } from "recoil";
 import axios from "axios";
 //selectors
 
-import ProductTemplate from "@/components/products/ProductTemplate";
+import ProductsTemplate from "@/components/products/ProductsTemplate";
 import { productsState } from "../../store/atoms";
 
 function ProductRender() {
@@ -27,7 +27,7 @@ function ProductRender() {
     <>
       <div className="flex gap-10 mt-[100px] justify-center">
         {products.map((product, key) => (
-          <ProductTemplate
+          <ProductsTemplate
             key={key}
             slug={product.slug}
             discount={product.discount}

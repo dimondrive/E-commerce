@@ -14,7 +14,7 @@ import {
   Routes,
 } from "react-router-dom";
 
-import ProductView from "@/components/products/ProductView";
+import ProductView from "@/components/products/ProductsView";
 
 import App from "@/components/App";
 import "@/index.css";

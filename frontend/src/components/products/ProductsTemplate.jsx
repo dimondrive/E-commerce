@@ -7,7 +7,7 @@ import "@/components/products/card.scss";
 import "@/components/products/cardMedia.scss";
 
 //images
-import ProductView from "@/components/products/ProductView";
+import ProductView from "@/components/products/ProductsView";
 //
 
 export default function Product({

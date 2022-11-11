@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, Link, BrowserRouter, Routes } from "react-router-dom";
 import Timer from "@/components/Layout/Timer/Timer";
-import ProductView from "@/components/products/ProductView";
+import ProductView from "@/components/products/ProductsView";
 
 export default function Root() {
   return (
