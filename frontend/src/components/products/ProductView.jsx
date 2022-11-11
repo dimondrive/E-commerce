@@ -1,7 +1,8 @@
 import React, { useState, useRef, createRef, useEffect } from "react";
 // import data from "../services/data";
-import { useRecoilValue, selector, useRecoilState } from "recoil";
+import { useRecoilValue, useRecoilState } from "recoil";
 import axios from "axios";
+//selectors
 
 import ProductTemplate from "@/components/products/ProductTemplate";
 import { productsState } from "../../store/atoms";
