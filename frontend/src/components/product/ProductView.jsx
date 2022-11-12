@@ -11,20 +11,34 @@ function ProductRender() {
   const { slug } = params;
 
   const [product, setProduct] = useRecoilState(productState);
-  const requireProducts = () => {
+
+  useEffect(() => {
+    console.log("useEffect mounts");
+    const cancelToken = axios.CancelToken.source();
     axios
-      .get(`http://localhost:5000/api/products/slug/${slug}`)
+      .get(`http://localhost:5000/api/products/slug/${slug}`, {
+        cancelToken: cancelToken.token,
+      })
       .then((result) => result.data)
       .then((result) => {
         console.log(result);
 
         setProduct(result);
+      })
+      .catch((err) => {
+        if (axios.isCancel(err)) {
+          console.log("cancelled");
+        } else {
+          //hande error
+        }
       });
-  };
-  useEffect(() => {
-    requireProducts();
     fetchState();
-  }, []);
+
+    return () => {
+      console.log("useEffect unmounts");
+      cancelToken.cancel();
+    };
+  }, [slug]);
   return (
     <>
       <div className="flex gap-10 mt-[100px] justify-center">
