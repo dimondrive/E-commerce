@@ -5,6 +5,8 @@ import RecoilNexus from "recoil-nexus";
 
 import HomePage from "@/components/pages/HomePage";
 import ProductPage from "@/components/pages/ProductPage";
+import ProductsPage from "@/components/pages/ProductsPage";
+
 import ErrorPage from "@/components/routes/error-page";
 import {
   createBrowserRouter,
@@ -30,7 +32,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/products",
-    element: <ProductView />,
+    element: <ProductsPage />,
   },
   {
     path: "/product/:slug",

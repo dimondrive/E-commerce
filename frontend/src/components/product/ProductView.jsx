@@ -29,7 +29,7 @@ function ProductRender() {
         if (axios.isCancel(err)) {
           console.log("cancelled");
         } else {
-          //hande error
+          //handle error
         }
       });
     fetchState();
