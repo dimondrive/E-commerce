@@ -16,7 +16,7 @@ import {
 
 import ProductView from "@/components/products/ProductsView";
 
-import App from "@/components/App";
+import App from "./App";
 import "@/index.css";
 
 const router = createBrowserRouter([

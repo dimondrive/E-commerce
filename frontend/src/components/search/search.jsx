@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import ReactDOM from "react-dom/client";
 import debounce from "lodash.debounce";
-import App from "@/components/App";
 
 export default function Search() {
   const [searchValue, setSearchValue] = useState("");

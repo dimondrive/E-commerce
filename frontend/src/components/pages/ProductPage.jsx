@@ -6,7 +6,7 @@ import ProductRender from "@/components/product/ProductView";
 function ProductPage() {
   return (
     <>
-      <h1>Text from prodctPage</h1>
+      <h1>Text from product Page</h1>
       <ProductRender />
     </>
   );
