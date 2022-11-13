@@ -24,7 +24,7 @@ export default function Product({
   return (
     <ul>
       <li className="product-container">
-        <div className="discount-label">
+        <div className="discount-label cursor-default">
           <span>{discount}%</span>
         </div>
         <div className="product ">
@@ -52,14 +52,14 @@ export default function Product({
               flex flex-col  w-[100%] pt-2"
           >
             <p
-              className="price font-sans font-semibold text-sm
+              className="price font-sans font-semibold text-sm cursor-default
 
             "
             >
               {price}.00 BYN
             </p>
             <p
-              className="price-old font-sans font-light  text-sm
+              className="price-old font-sans font-light  text-sm cursor-default
             
             "
             >
