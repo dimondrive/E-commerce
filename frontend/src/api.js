@@ -1,7 +1,7 @@
 import { setRecoil, getRecoil } from 'recoil-nexus';
 import axios from 'axios';
 
-import { productsState, productState } from "./store/atoms";
+import { productsState, productState, catalogState} from "./store/atoms";
 
 export async function getProducts(){
 	let result = await axios.get("http://localhost:5000/api/products");
@@ -19,4 +19,11 @@ export async function getProduct(slug){
 	let result = await axios.get(`http://localhost:5000/api/products/slug/${slug}`);
 	
 	setRecoil(productState,result.data);
+}
+
+export async function getCatalog(){
+
+	let result = await axios.get(`http://localhost:5000/api/catalog`)
+
+	setRecoil(catalogState, result.data)
 }

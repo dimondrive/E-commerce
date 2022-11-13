@@ -10,7 +10,7 @@ export const productState = atom({
     default: []
 })
 
-export const CatalogState = atom({
+export const catalogState = atom({
     key: "CatalogList",
     default: []
 })
