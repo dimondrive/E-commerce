@@ -5,17 +5,17 @@ const app = express()
 
 
 
-// app.use(cors())
+app.use(cors())
 
-app.get('/api/products', cors({
-    origin: '*'
-}), (req, res) => {
+app.get('/api/products', (req, res) => {
     res.send(data.products)
 });
 
-app.get('/api/products/slug/:slug', cors({
-    origin: '*'
-}), (req, res) => {
+app.get('/api/catalog', (req, res) => {
+    res.send(data.catalog)
+});
+
+app.get('/api/products/slug/:slug', (req, res) => {
     const product = data.products.find(x => x.slug === req.params.slug)
     if(product) {
         res.send(product)

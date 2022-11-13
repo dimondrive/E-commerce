@@ -51,7 +51,7 @@ export default function Navbar({ searchValue, setSearchValue }) {
               </a>
 
               <a
-                href="/products"
+                href="/catalog"
                 // element={<ProductRender />}
                 className="text-[15px] font-sans font-normal"
               >

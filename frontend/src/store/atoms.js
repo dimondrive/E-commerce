@@ -9,3 +9,8 @@ export const productState = atom({
     key: "Product",
     default: []
 })
+
+export const CatalogState = atom({
+    key: "Catalog",
+    default: []
+})

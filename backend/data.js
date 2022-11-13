@@ -41,7 +41,27 @@ const data = {
         slug:'samsung-galaxy-s30-5g-4gb-64gb'
     },
        
+    ],
+
+
+    catalog: [
+       {
+        id:1,
+        category: "Электронная техника",
+        section: [
+            "Смарфтоны",
+            "Планшеты"
+        ]
+       }, 
+       {
+        id:2,
+        category: "Комп техника",
+        section: [
+            "Ноутбуки",
+            "Пк"
+        ]
+       }
     ]
 }
-
+    
 export default data
