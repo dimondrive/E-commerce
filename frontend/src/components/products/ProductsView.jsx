@@ -1,25 +1,16 @@
-import React, { useState, useRef, createRef, useEffect } from "react";
-// import data from "../services/data";
-import { useRecoilValue, useRecoilState } from "recoil";
-import axios from "axios";
-//selectors
+import React, { useEffect } from "react";
+import { useRecoilValue } from "recoil";
 
 import ProductsTemplate from "@/components/products/ProductsTemplate";
 import { productsState } from "../../store/atoms";
 
+import { getProducts } from "../../api";
+
 function ProductRender() {
-  const [products, setProducts] = useRecoilState(productsState);
-  const requireProducts = () => {
-    axios
-      .get("http://localhost:5000/api/products")
-      .then((result) => result.data)
-      .then((result) => {
-        setProducts(result);
-      });
-  };
+  const products = useRecoilValue(productsState);
 
   useEffect(() => {
-    requireProducts();
+    getProducts();
   }, []);
   console.log("Products", products);
 
