@@ -6,52 +6,32 @@ import { productState } from "../../store/atoms";
 import axios from "axios";
 import { Routes, Route, useParams } from "react-router-dom";
 
+
+import { getProduct } from "../../api";
+
 function ProductRender() {
   const params = useParams();
   const { slug } = params;
 
-  const [product, setProduct] = useRecoilState(productState);
+  const product = useRecoilValue(productState);
 
   useEffect(() => {
-    console.log("useEffect mounts");
-    const cancelToken = axios.CancelToken.source();
-    axios
-      .get(`http://localhost:5000/api/products/slug/${slug}`, {
-        cancelToken: cancelToken.token,
-      })
-      .then((result) => result.data)
-      .then((result) => {
-        console.log(result);
-
-        setProduct(result);
-      })
-      .catch((err) => {
-        if (axios.isCancel(err)) {
-          console.log("cancelled");
-        } else {
-          //handle error
-        }
-      });
-    fetchState();
-
-    return () => {
-      console.log("useEffect unmounts");
-      cancelToken.cancel();
-    };
+		getProduct(slug);
   }, [slug]);
+	
+	if(!product) return (<></>); //Some state for loading
+	
   return (
-    <>
-      <div className="flex gap-10 mt-[100px] justify-center">
-        <ProductTemplate
-          slug={product.slug}
-          discount={product.discount}
-          price={product.price}
-          name={product.name}
-          image={product.image}
-          oldPrice={product.priceOld}
-        />
-      </div>
-    </>
+		<div className="flex gap-10 mt-[100px] justify-center">
+			<ProductTemplate
+				slug={product.slug}
+				discount={product.discount}
+				price={product.price}
+				name={product.name}
+				image={product.image}
+				oldPrice={product.priceOld}
+			/>
+		</div>
   );
 }
 
