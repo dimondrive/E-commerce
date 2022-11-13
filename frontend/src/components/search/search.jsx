@@ -1,9 +1,41 @@
 import React, { useState, useEffect, useContext } from "react";
 import ReactDOM from "react-dom/client";
 import debounce from "lodash.debounce";
+import { fetchState } from "../../store/interceptor";
+// import { productSearch } from "../../store/atoms";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { atom } from "recoil";
+import { selector } from "recoil";
+import axios from "axios";
+
+const requireProducts = async () => {
+  await axios
+    .get("http://localhost:5000/api/products")
+    .then((result) => result.data)
+    .then((result) => {});
+};
+
+const productSearch = atom({
+  key: "Prod",
+  default: "",
+});
+
+export const searchProductSelector = selector({
+  key: "searchSelector",
+  get: async ({ get }) => {
+    const products = get(productSearch);
+
+    console.log(requireProducts(products));
+    return requireProducts(products);
+  },
+});
+
+// useEffect(() => {
+//   requireProducts(products);
+// }, []);
 
 export default function Search() {
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useRecoilState(productSearch);
 
   const inputRef = React.useRef();
 

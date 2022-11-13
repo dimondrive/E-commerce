@@ -1,7 +1,7 @@
 import { atom } from "recoil"
 
 export const productsState = atom({
-    key: "Products",
+    key: "ProductsList",
     default: []
 })
 
@@ -11,6 +11,7 @@ export const productState = atom({
 })
 
 export const CatalogState = atom({
-    key: "Catalog",
+    key: "CatalogList",
     default: []
 })
+
