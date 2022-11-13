@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductTemplate from "@/components/product/ProductTemplate";
-import { fetchState } from "@/store/interceptor";
+
 import { useRecoilState, useRecoilValue, useRecoilValueLoadable } from "recoil";
 import { productState } from "../../store/atoms";
 import axios from "axios";

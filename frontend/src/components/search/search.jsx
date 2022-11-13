@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import ReactDOM from "react-dom/client";
 import debounce from "lodash.debounce";
-import { fetchState } from "../../store/interceptor";
 
 import { useRecoilState, useRecoilValue } from "recoil";
 import { atom } from "recoil";
