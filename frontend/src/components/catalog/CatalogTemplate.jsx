@@ -6,7 +6,7 @@ function CatalogTemplate({ category, section, index }) {
     <>
       <div className="flex container h-full mx-auto px-4 ">
         <div className="flex catalog_section_list row ">
-          <div className="secrion_item item">
+          <div className="section_item item">
             <table className="section_item_inner">
               <tbody>
                 <tr className="flex gap-5">

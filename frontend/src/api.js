@@ -1,4 +1,5 @@
 import { setRecoil, getRecoil } from 'recoil-nexus';
+import axios from 'axios';
 
 import { productsState, productState } from "./store/atoms";
 
@@ -11,7 +12,7 @@ export async function getProducts(){
 export async function getProduct(slug){
 	let products = getRecoil(productsState);
 	
-	let product=product.find(product=>product.slud===slug);
+	let product=products.find(product=>product.slud===slug);
 	
 	if(product) return setRecoil(productState, product);
 	
