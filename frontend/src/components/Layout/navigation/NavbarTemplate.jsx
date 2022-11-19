@@ -15,26 +15,30 @@ export default function Navbar({ searchValue, setSearchValue }) {
       <nav className="w-full h-[90px] bg-gray-200/50">
         <div className="container h-full mx-auto px-4">
           <div className=" h-full flex items-center justify-between">
-            <div className="flex gap-[23px] items-center">
+            <div className="flex gap-5  md:gap-[23px] items-center ">
               <a href="/" className="">
-                <img className="rounded-full" src={IconLogo} alt="logo" />
+                <img
+                  className="rounded-full w-[45px] md:w-[60px] lg:min-w-[66px]"
+                  src={IconLogo}
+                  alt="logo"
+                />
               </a>
               <a
                 href="/"
-                className="text-[21px] font-sans tracking-wide font-bold uppercase leading-5"
+                className="  text-[12px] sm:text-[15px]  md:text-[15px] lg:text-[21px]  font-sans tracking-wide font-bold uppercase leading-5"
               >
                 Мир <br /> Электроники
               </a>
             </div>
 
-            <div>
+            <div className="hidden md:block">
               <Search
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
               />
             </div>
 
-            <div className="flex gap-[56px]">
+            <div className="hidden gap-[20px] md:flex lg:gap-[56px]">
               <a
                 href="/"
                 // element={<PageMain />}

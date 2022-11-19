@@ -12,6 +12,7 @@ function ProductRender() {
   useEffect(() => {
     getProducts();
   }, []);
+
   console.log("Products", products);
 
   return (
